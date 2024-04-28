@@ -30,9 +30,10 @@ cp *.py $PACKAGE_DIR/
 # cp -r config/ $PACKAGE_DIR/config/
 
 # Navigate to the package directory and zip all contents
+# Navigate to the package directory and use PowerShell to zip all contents
 echo "Creating ZIP file..."
 cd $PACKAGE_DIR
-zip -r ../deployment_package_$DATE.zip .
+powershell Compress-Archive -Path '*' -DestinationPath "../deployment_package_$DATE.zip"
 cd ..
 
 # Optionally, remove the package directory after zipping if you want to clean up
