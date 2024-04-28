@@ -1,0 +1,16 @@
+# AWS SDK for Python
+boto3
+
+# HTTP requests to interface with the JotForm API
+requests
+
+# Hashing libraries (hashlib is part of the standard library, so it's not included here)
+# No additional library needed for basic hashing since Python's hashlib covers it
+
+# PDF manipulation
+PyPDF2
+# Alternatively, consider using pikepdf or pdfplumber for more complex PDF manipulation
+pikepdf
+
+# Environment management (optional, for managing configurations not directly related to AWS SDK)
+python-dotenv
