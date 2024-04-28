@@ -3,6 +3,9 @@
 # Define your package directory
 PACKAGE_DIR="package"
 
+# Get the current date and time in the format: YYYYMMDD-HHMMSS
+DATE=$(date +%Y%m%d-%H%M%S)
+
 # Check if the package directory exists
 if [ -d "$PACKAGE_DIR" ]; then
     # The directory exists, so clear it
@@ -29,7 +32,7 @@ cp *.py $PACKAGE_DIR/
 # Navigate to the package directory and zip all contents
 echo "Creating ZIP file..."
 cd $PACKAGE_DIR
-zip -r ../deployment_package.zip .
+zip -r ../deployment_package_$DATE.zip .
 cd ..
 
 # Optionally, remove the package directory after zipping if you want to clean up
